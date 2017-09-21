@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 219
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl
+END
+LogInByAccountServiceIml.java
+K 25
+svn:wc:ra_dav:version-url
+V 249
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/LogInByAccountServiceIml.java
+END
+L3NetworkServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 245
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/L3NetworkServiceImpl.java
+END
+ResourcePoolServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 248
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/ResourcePoolServiceImpl.java
+END
+LogOutServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 242
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/LogOutServiceImpl.java
+END
+ImageServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 241
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/ImageServiceImpl.java
+END
+InstanceOfferingServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 252
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/InstanceOfferingServiceImpl.java
+END
+VmInstanceServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 246
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/VmInstanceServiceImpl.java
+END
+ZoneServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 240
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/ZoneServiceImpl.java
+END
+DiskOfferingServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 248
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/DiskOfferingServiceImpl.java
+END
+ZsUserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 242
+/svn/MyRepository/!svn/ver/2/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/04%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/%E4%BA%91%E4%BA%A7%E5%93%81%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81/ZStackSSMB/src/main/java/cn/springmvc/service/impl/ZsUserServiceImpl.java
+END

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.springmvc.dao.UserDiskInfoMapper">
+	<!-- 定义缓存 一般是一级缓存，如果用同一个sqlsession 那么相同查询直接会从缓存中查找 -->
+	<!-- <cache size="1024" flushInterval="60000" eviction="LRU" readOnly="false"></cache> -->
+	<resultMap id="UserDiskResultMap" type="cn.springmvc.model.UserDiskInfo">
+		<id column="userID" property="userID" jdbcType="VARCHAR" />
+		<result column="userName" property="userName" jdbcType="VARCHAR" />
+		<result column="operator" property="operator" jdbcType="VARCHAR" />
+		<result column="totalSize" property="totalSize" jdbcType="VARCHAR" />
+		<result column="usedSize" property="usedSize" jdbcType="VARCHAR" />
+		<result column="updateDate" property="updateDate" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		cloud_disk_user.userID, 
+		cloud_disk_user.userName, 
+		cloud_disk_user.userLoginID,
+		cloud_disk_user.operator,
+		cloud_disk_info.totalSize,
+		cloud_disk_info.usedSize,
+		cloud_disk_info.updateDate
+	</sql>
+	<!-- 查询数据 -->
+	<select id="queryUserDiskInfo" parameterType="cn.springmvc.model.UserDiskInfo"
+		resultMap="UserDiskResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from cloud_disk_user,cloud_disk_info
+		<where>
+		     cloud_disk_user.userID = cloud_disk_info.userID
+			<if test="userID!=null">
+				and userID = #{userID}
+			</if>
+			<if test="userLoginID!=null">
+				and userLoginID = #{userLoginID}
+			</if>
+			<if test="userName!=null">
+				and userName = #{userName}
+			</if>
+			<if test="operator!=null">
+				and operator = #{operator}
+			</if>
+			<if test="updateDate!=null">
+				and updateDate = #{updateDate}
+			</if>		
+		</where>
+	</select>
+	<!-- 分页查询数据 -->
+	<select id="queryInfoByPage" parameterType="java.util.Map"
+		resultMap="UserDiskResultMap">
+		select 
+		<include refid="Base_Column_List" />
+		from cloud_disk_user,cloud_disk_info 
+		<where>
+		     cloud_disk_user.userID = cloud_disk_info.userID
+		    <if test="#{search}!=null and #{search}!=''">
+		    	and (cloud_disk_user.userLoginID LIKE '%${search}%'
+		    	or cloud_disk_user.userName LIKE '%${search}%'
+		    	or cloud_disk_user.operator LIKE '%${search}%'
+		    	or cloud_disk_info.totalSize LIKE '%${search}%'
+		    	or cloud_disk_info.usedSize LIKE '%${search}%'
+		    	or cloud_disk_info.updateDate LIKE '%${search}%')
+		    </if>
+		</where>
+		order by ${sortName}  ${sortOrder}
+		limit ${start},${end}
+	</select>
+	
+	<!-- 查询数据总数 -->
+	<select id="queryCount" parameterType="java.util.Map"
+		resultMap="UserDiskResultMap">
+		select 
+		<include refid="Base_Column_List" />
+		from cloud_disk_user,cloud_disk_info 
+		<where>
+		     cloud_disk_user.userID = cloud_disk_info.userID
+		    <if test="#{search}!=null and #{search}!=''">
+		    	and (cloud_disk_user.userLoginID LIKE '%${search}%'
+		    	or cloud_disk_user.userName LIKE '%${search}%'
+		    	or cloud_disk_user.operator LIKE '%${search}%'
+		    	or cloud_disk_info.totalSize LIKE '%${search}%'
+		    	or cloud_disk_info.usedSize LIKE '%${search}%'
+		    	or cloud_disk_info.updateDate LIKE '%${search}%')
+		    </if>
+		</where>
+		order by ${sortName}  ${sortOrder}
+	</select>
+	
+	
+</mapper>

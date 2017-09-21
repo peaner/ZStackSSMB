@@ -1,0 +1,102 @@
+.sa-side-home {
+	background-image: url(../img/skin-blue.jpg);
+	background-repeat: no-repeat;
+	background-size: 70%;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-attachment: fixed;
+}
+
+@media screen and (max-width:767px){
+	.nav>div{
+		width:25%;
+	}
+
+	h4{
+		font-size:14px;
+	}
+	
+	.navbar-nav.navbar-right .open .dropdown-menu {
+    	position: absolute;
+  		display: inline;
+  		padding: 5px 0;
+  		font-size: 14px;
+  		background-color: white;
+  		border-radius: 0;
+  		-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	}
+
+	.navbar-nav.navbar-right {
+  		margin: 0px -15px;
+	}
+	
+	.tab>li{
+		width: 25%;
+	}
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: #222;
+  border-color: #337ab7;
+}
+
+.dropdown-menu.dropdown-menu-left {
+	border-radius: 0;
+	min-width:0;
+	max-width:160;
+	background-color: white;
+}
+
+.dropdown-divider {
+	height: 1px;
+	width: 80%;
+  	margin: 0px 10%;
+  	overflow: hidden;
+  	background-color: #e5e5e5;
+}
+
+.modal-content{
+	background: linear-gradient(to bottom,#99CDFF 0,white 100%);
+}
+
+.modal-header{
+	text-align: center;
+	border-top-radius: 6px;
+	border-bottom: 1px solid #69DEFF;
+}
+
+.modal-sm .modal-header,.modal-md .modal-header{
+	text-align: center;
+	border-top-radius: 6px;
+	border-bottom: 0;
+}
+
+.modal-header h4{
+	font-size:20px;
+}
+
+.modal-footer{
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-top: 1px solid #ddd;
+}
+
+.modal-sm {
+    width: 350px;
+}
+
+.modal-md{
+	width: 500px;
+}
+
+.tab>li{
+	width: 18%;
+	border-right: 1px solid #e2e2e2
+}

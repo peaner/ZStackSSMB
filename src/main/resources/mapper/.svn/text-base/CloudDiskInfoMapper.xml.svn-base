@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.springmvc.dao.CloudDiskInfoMapper" >
+  <resultMap id="BaseResultMap" type="cn.springmvc.model.CloudDiskInfo" >
+    <result column="userID" property="userid" jdbcType="VARCHAR" />
+    <result column="totalSize" property="totalsize" jdbcType="VARCHAR" />
+    <result column="usedSize" property="usedsize" jdbcType="VARCHAR" />
+    <result column="updateDate" property="updatedate" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="cn.springmvc.model.CloudDiskInfo" >
+    insert into cloud_disk_info (userID, totalSize, usedSize, 
+      updateDate)
+    values (#{userid,jdbcType=VARCHAR}, #{totalsize,jdbcType=VARCHAR}, #{usedsize,jdbcType=VARCHAR}, 
+      #{updatedate,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.springmvc.model.CloudDiskInfo" >
+    insert into cloud_disk_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        userID,
+      </if>
+      <if test="totalsize != null" >
+        totalSize,
+      </if>
+      <if test="usedsize != null" >
+        usedSize,
+      </if>
+      <if test="updatedate != null" >
+        updateDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="totalsize != null" >
+        #{totalsize,jdbcType=VARCHAR},
+      </if>
+      <if test="usedsize != null" >
+        #{usedsize,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedate != null" >
+        #{updatedate,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <!-- 更新数据 -->
+  <update id="updatecloudDiskInfo" parameterType="cn.springmvc.model.CloudDiskInfo">
+    update cloud_disk_info
+    <set >
+      <if test="totalsize != null" >
+        totalSize = #{totalSize},
+      </if>
+      <if test="usedsize != null" >
+        usedSize = #{usedSize},
+      </if>
+      <if test="updatedate != null" >
+        updateDate = #{updateDate},
+      </if>
+    </set>
+    where userID = #{userID}
+  </update>
+  <!-- 删除数据 -->
+	<delete id="deleteCloudDiskInfo" parameterType="cn.springmvc.model.CloudDiskInfo">
+		delete from
+		cloud_disk_info
+		where userID = #{userID}
+	</delete>
+</mapper>

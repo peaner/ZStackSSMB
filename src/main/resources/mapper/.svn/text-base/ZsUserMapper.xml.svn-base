@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!-- namespace：必须与对应的接口全类名一致 id:必须与对应接口的某个对应的方法名一致 -->
+<mapper namespace="cn.springmvc.dao.ZsUserDao">
+
+	<!-- 定义缓存 一般是一级缓存，如果用同一个sqlsession 那么相同查询直接会从缓存中查找 -->
+	<!-- <cache size="1024" flushInterval="60000" eviction="LRU" readOnly="false"></cache> -->
+	
+	<!-- 返回对象map值 -->
+	<resultMap id="ZsUserModelResultMap" type="cn.springmvc.model.ZsUserModel">
+		<result column="uuid" property="uuid" jdbcType="VARCHAR" />
+		<result column="user" property="user" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="date" property="date" jdbcType="VARCHAR" />
+	</resultMap>	
+	<!-- 插入数据 -->
+	<insert id="insertZsUserInfo" parameterType="cn.springmvc.model.ZsUserModel">
+		insert into zsuser(
+		uuid,
+		user,
+		password,
+		date)
+		values
+		(
+		#{uuid},
+		#{user},
+		#{password},
+		#{date})
+	</insert>
+	
+	<!-- 查询数据 -->
+	<select id="queryZsUserInfo" parameterType="cn.springmvc.model.ZsUserModel" resultMap="ZsUserModelResultMap">
+		select * from zsuser where user=#{user} and password=#{password}
+	</select>
+	<select id="checkZsUserInfo" parameterType="cn.springmvc.model.ZsUserModel" resultMap="ZsUserModelResultMap">
+		select * from zsuser where user=#{user}
+	</select>
+	<!-- 删除数据 -->
+	<delete id="deleteZsUserInfo" parameterType="cn.springmvc.model.ZsUserModel">
+		delete from zsuser where uuid=#{uuid}
+	</delete>
+	<!-- 更新数据 -->
+	<update id="resetUserPassword" parameterType="cn.springmvc.model.ZsUserModel">
+	  	update zsuser set
+		   password=888888 
+		   where uuid=#{uuid}
+	</update>	
+	<update id="updateUserPassword" parameterType="cn.springmvc.model.ZsUserModel">
+	  	update zsuser set
+		   password=#{password} 
+		   where user=#{user}
+	</update>	
+	<update id="updateUserName" parameterType="cn.springmvc.model.ZsUserModel">
+	  	update zsuser set
+		   user=#{user} 
+		   where uuid=#{uuid}
+	</update>	
+</mapper>
